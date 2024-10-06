@@ -21,6 +21,13 @@
         <!-- Adding a search input field above the task list -->
         <input type="text" id="searchTask" placeholder="Search tasks..." onkeyup="filterTasks()">
 
+        <!-- Add radio buttons to filter tasks -->
+        <div id="filterOptions">
+            <input type="radio" name="filter" id="filterAll" checked onclick="filterTasksByStatus('all')"> All
+            <input type="radio" name="filter" id="filterCompleted" onclick="filterTasksByStatus('completed')"> Completed
+            <input type="radio" name="filter" id="filterIncomplete" onclick="filterTasksByStatus('incomplete')"> Incomplete
+        </div>
+
         <!-- Placeholder for the task list -->
         <ul id="taskList"></ul>
     </div>
