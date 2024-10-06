@@ -3,34 +3,39 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f0f0f0;
-    margin-top: 50px;
+    margin: 0;
+    padding: 20px 0; /* Added padding for better spacing */
 }
 
 .container {
-    width: 300px;
-    margin: 0 auto;
+    max-width: 400px; /* Increased width for better usability */
+    margin: auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
 }
 
 /* Heading styling */
 h1 {
     color: #333;
-    font-size: 24px;
+    font-size: 28px; /* Increased font size for emphasis */
     margin-bottom: 20px;
 }
 
 /* Input and button styling */
-input {
+input[type="text"] {
     padding: 10px;
-    width: 70%;
+    width: calc(100% - 90px); /* Responsive width calculation */
     font-size: 16px;
-    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Smooth transition */
 }
 
-
+input[type="text"]:focus {
+    border-color: #007bff; /* Highlight border on focus */
+}
 
 /* Task list styling */
 ul {
@@ -43,19 +48,21 @@ li {
     background-color: #f9f9f9;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    display: flex; /* Flex for better alignment */
+    justify-content: space-between; /* Space between task text and buttons */
+    align-items: center; /* Center items vertically */
 }
 
 /* Styling the buttons for Remove and Edit */
 button {
     padding: 5px 10px;
     margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 button.removeTask {
@@ -67,5 +74,20 @@ button.editTask {
 }
 
 button:hover {
-    opacity: 0.9;
+    opacity: 0.9; /* Slight hover effect */
+}
+
+button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    input[type="text"] {
+        width: calc(100% - 80px); /* Adjust input width for small screens */
+    }
 }
