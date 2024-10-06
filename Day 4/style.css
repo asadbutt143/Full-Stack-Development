@@ -30,13 +30,7 @@ input {
     margin-right: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
+
 
 /* Task list styling */
 ul {
@@ -49,4 +43,29 @@ li {
     background-color: #f9f9f9;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+}
+
+/* Styling the buttons for Remove and Edit */
+button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.removeTask {
+    background-color: #ff4d4d; /* Red for Remove */
+}
+
+button.editTask {
+    background-color: #f0ad4e; /* Yellow for Edit */
+}
+
+button:hover {
+    opacity: 0.9;
 }
